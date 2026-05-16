@@ -18,6 +18,7 @@ main {
   background-color: rgb(255, 255, 255);
   padding: 0px 55px;
   padding-bottom: 30px;
+  position: relative;
   display: grid;
   gap: 15px;
   grid-template-columns: repeat(5, 1fr);
@@ -85,6 +86,13 @@ main {
   padding-left: 40px;
 }
 
+.left-top hr{
+  position: absolute;
+  top: 10%;
+  width: 93vw;
+  left: 55px;
+}
+
 .left-center-text {
   grid-area: left-center-text;
   border-radius: 25px;
@@ -129,7 +137,7 @@ main {
   grid-area: right-top;
   border-radius: 25px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .right-center-logo {
   grid-area: right-center-logo;
@@ -206,7 +214,7 @@ main {
   text-align: center;
   font-weight: 600;
   line-height: 60px;
-  padding-bottom: 40px;
+  padding: 20px 0px 40px 0px;
 } 
 
 .center-top-text img{
