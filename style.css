@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 0px 55px;
+  padding-bottom: 30px;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1.5fr 1fr 1.5fr 1fr 1fr 1fr 1fr 1fr 1.5fr 1fr 1.7fr;
+
+  grid-template-areas:
+    "navbar navbar navbar navbar navbar"
+    "left-top center-top-text center-top-text center-top-text right-top"
+    "left-center-text center-top-text center-top-text center-top-text  right-center-logo"
+    "left-center-text center-image2 center-image3 center-image4 right-center-logo "
+    "left-center-image1 center-image2 center-image3 center-image4 right-center-logo"
+    "left-center-image1 center-image2 center-image3 center-image4 right-image5"
+    "left-center-image1 center-image6 center-image3 center-image4 right-image5"
+    "left-center-image1 center-image6 center-image3 center-image7 right-image5"
+    "space center-image6 center-image3 center-image7 right-space"
+    "left-bottom left-bottom center-image3 right-bottom right-bottom"
+    "left-bottom left-bottom center-bottom right-bottom right-bottom";
+}
+
+.navbar {
+  grid-area: navbar;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.part2 ul{
+  display: flex;
+  gap: 30px;
+}
+
+.part2 ul li{
+  list-style: none;
+}
+
+.part2 ul li a{
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.part3{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.shop{
+  height: 40px;
+  width: 40px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop i{
+  filter: invert(1);
+}
+
+.left-top {
+  grid-area: left-top;
+  border-radius: 25px;
+  padding-left: 40px;
+}
+
+.left-center-text {
+  grid-area: left-center-text;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.left-center-text h2{
+  line-height: 28px;
+}
+
+.left-center-image1 {
+  grid-area: left-center-image1;
+  background-color: rgb(255, 179, 78);
+  border-radius: 25px;
+  position: relative;
+}
+
+.left-center-image1 img{
+  position: absolute;
+  top: -37px;
+  left: -25px;
+}
+
+.space{
+  position: relative;
+}
+
+.space img{
+  padding-left: 0px;
+  position: absolute;
+  left: -10px;
+}
+
+.left-bottom {
+  grid-area: left-bottom;
+  /* padding: 10px; */
+}
+
+.right-top {
+  grid-area: right-top;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+}
+.right-center-logo {
+  grid-area: right-center-logo;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-bottom {
+  grid-area: right-bottom;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+
+.date {
+  display: flex;
+  gap: 35px;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.arrow h1{
+  font-weight: 300;
+}
+.arrow h2{
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.right-space{
+  display: flex;
+  justify-content: center;
+}
+
+.right-space img{
+  position: absolute;
+  bottom: 135px;
+}
+
+.right-image5 {
+  grid-area: right-image5;
+  border-radius: 25px;
+  background-color: rgb(118, 182, 142);
+  position: relative;
+}
+
+.right-image5 img{
+  position: absolute;
+  top: -10px;
+  right: 60px;
+}
+
+.center-top-text {
+  grid-area: center-top-text;
+  border-radius: 25px;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  align-self: center;
+  justify-self: center;
+  letter-spacing: 2px;
+  font-size: 26px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 60px;
+  padding-bottom: 40px;
+} 
+
+.center-top-text img{
+  position: absolute;
+  left: 400px;
+  top: 17%;
+}
+
+.center-image2 {
+  grid-area: center-image2;
+  border-radius: 25px;
+  background-color: rgb(236, 213, 175);
+  position: relative;
+}
+
+.center-image2 img{
+  position: absolute;
+  height: 500px;
+  top: -30px;
+  left: -30px;
+}
+
+.center-image3 {
+  grid-area: center-image3;
+  background-color: rgb(252, 212, 66);
+  border-radius: 25px;
+  position: relative;
+}
+
+.center-image3 .image3{
+  position: absolute;
+  bottom: 0%;
+  height: 50vh;
+}
+
+.star{
+  height: 70px;
+  position: absolute;
+  top: -40px;
+  left: 80px;
+}
+
+.center-image4 {
+  grid-area: center-image4;
+  border-radius: 25px;
+  background-color: rgb(255, 117, 27);
+  position: relative;
+}
+
+.center-image4 img {
+ position: absolute;
+  height: 300px;
+  left: -123px;
+  bottom: -62px;
+}
+
+.center-image6 {
+  grid-area: center-image6;
+  border-radius: 25px;
+  background-color: rgb(37, 183, 173);
+  position: relative;
+}
+
+.center-image6 img{
+  position: absolute;
+  height: 23vh;
+  left: 60px;
+  bottom: 0px;
+}
+
+.center-image7 {
+  grid-area: center-image7;
+  border-radius: 25px;
+  background-color: rgb(0, 160, 238);
+  position: relative;
+}
+
+.center-image7 img{
+  position: absolute;
+  top: -38px;
+  left: 32px;
+}
+
+.center-bottom {
+  grid-area: center-bottom;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-bottom button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 15px;
+  padding: 15px 15px;
+  background-color: white;
+  font-weight: 700;
+}
+
+.pink-rose{
+  position: absolute;
+  left: 500px;
+}
+
